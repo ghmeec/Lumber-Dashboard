@@ -24,6 +24,7 @@
     "node": "10.19.0",
     "yarn": "1.17.0"
   },
+  
   "eslintConfig": {
     "extends": "react-app"
   },
