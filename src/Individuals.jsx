@@ -24,13 +24,14 @@ const columns = [
     {
         title: 'Action',
         key: 'action',
-        render: (text, record) => (
+        render: (text, record) =>{
+            return (
             <span>
-                  <a href={`https://maps.google.com/?ll=${record.location.latitude },${record.location.longitude}`} target="_blank">Open Location</a>
+                {record.location&&record.location.latitude &&record.location.longitude &&<a href={`http://maps.google.com/maps?q=${record.location.latitude },${record.location.longitude}&ll=${record.location.latitude },${record.location.longitude}&z=17`} target="_blank">Open Location</a>}
                 <Divider type="vertical" />
                 <a>Delete</a>
             </span>
-        ),
+        )},
     },
 ];
 
